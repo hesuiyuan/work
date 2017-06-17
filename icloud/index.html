@@ -1,0 +1,82 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/Angular.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body ng-controller="c1">
+<div class="body_max" ng-show="isshow" ng-click="ooo()"></div>
+<section class="left">
+    <div class="left_top">
+        <div class="left_logo">
+            iCoud
+        </div>
+        <div class="left_add"ng-click="addele(arr[index].id)">
+             <div></div>
+             <div></div>
+        </div>
+    </div>
+    <ul class="left_list">
+       <li ng-repeat="v in arr" ng-class="{'red':$index==index}" ng-click="add(v.id,v.color)">
+           <div class="color" ng-style="{background:v.color}"></div>
+           <div class="text">
+                  {{v.title}}
+           </div>
+       </li>
+    </ul>
+</section>
+<section class="right">
+<div class="find">
+  <div class="right_input">
+      <div class="right_logo">&#xe67a;</div>
+      <input type="text" placeholder="搜索所有的提醒">
+  </div>
+</div>
+    <div class="content">
+    <div class="h1"><div ng-style="{color:arr[index].color}">{{arr[index].title}}</div>
+                    <div ng-style="{color:arr[index].color}" ng-click="show(index)">选项</div>
+    </div>
+        <div class="one"><div class=""><div class="sj" ng-class={'active':tagle} ng-click="tag()"></div></div><span>已经完成{{done_num}}个</span><span ng-style="{color:arr[index].color}"ng-show=tagle; ng-click="delall()">清除已完成的事项</span></div>
+        <!-- 已经完成的内容 -->
+        <div class="tow" ng-repeat="v in arr[index].todos|filter:{'done':true}" ng-show=tagle;>
+            <div ng-click="chargestate(v,false)"ng-class="{'only':true,'radum':false}"ng-style="{backgroundColor:arr[index].color,borderColor:arr[index].color}"></div>
+           <div><input type="text" ng-model="v.con"></div>
+        </div>
+        <!--  已经完成的内容完-->
+        <section style="margin-bottom: 30px"></section>
+          <div class="tow" ng-repeat="v in arr[index].todos|filter:{'done':false}">
+            <div ng-click="chargestate(v,true)" ng-class="{'only':false,'radum':true}"ng-style="{borderColor:arr[index].color}"></div>
+            <div><input type="text" ng-model="v.con"></div>
+        </div>
+         <div class="tow">
+            <div class="newproject" ng-click="addnewpro()">新项目...</div>
+        </div>
+    </div>
+</section>
+<div class="box" ng-show="isshow">
+    <div class="box_small">
+        <div class="box_top">
+            <input type="text" ng-model="showTitle"ng-style="{color:showColor}">
+            <div class="text_color"><h4>列表颜色</h4></div>
+            <ul class="box_color">
+                <li ng-repeat="v in colorall" ng-style="{backgroundColor:v,borderColor:v==showColor?showColor:''}" ng-click="selectColor(v)"> 
+                </li>
+            </ul>
+        </div>
+        <div class="box_bottom">
+            <div class="del" ng-click="delsome(index)">删除</div>
+            <div class="res" ng-click="newall()">完成</div>
+            <span>|</span>
+            <div class="over" ng-click="ooo()">取消</div>
+        </div>
+    </div>
+    <div class="box_sanjiao"></div>
+</div>
+</body>
+<script src="js/index.js"></script>
+</html>
