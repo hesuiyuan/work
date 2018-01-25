@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/mobile.css"/>
+	</head>
+	<style type="text/css">
+		body,html{
+			background: #fff;
+		}
+		.h_qd{
+			width: 100%;
+			height: 4.2rem;
+			background: url(img/qd.jpg) no-repeat;
+			background-size:100% 100%;
+			position: relative;
+			margin-bottom: .2rem;
+		}
+		.h_qd>li:first-child{
+			width: 2.64rem;
+			height: 2.64rem;
+			border-radius: 2rem;
+			background: rgba(255,255,255,0.2);
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-left: -1.32rem;
+			margin-top: -1.32rem;
+		}
+		.h_qd>li:nth-child(2){
+			width: 2.34rem;
+			height: 2.34rem;
+			border-radius: 2.34rem;
+			background: #fff;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-left: -1.17rem;
+			margin-top: -1.17rem;
+		}
+		.h_qd>li:nth-child(3){
+			width: 2rem;
+			height: 2rem;
+			border-radius: 2rem;
+			border: .02rem solid #ed9793;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-top: -1rem;
+			margin-left: -1rem;
+			padding-left: .16rem;
+			padding-right: .16rem;
+		}
+		.h_qd>li:nth-child(3)>div:first-child{
+			width: 100%;
+			height: 50%;
+			text-align: center;
+			line-height: 1rem;
+			font-size: .38rem;
+			font-weight: bold;
+			color: #dc6828;
+			border-bottom: 1px solid #dc6828;
+		}
+		.h_qd>li:nth-child(3)>div:last-child{
+			width: 100%;
+			height: 50%;
+			text-align: center;
+			font-size: .3rem;
+			 color: #dc6828;
+			 line-height: .8rem;
+			border-top: 1px solid #dc6828;
+		}
+		.h_qd>li:nth-child(3)>div:last-child>i{
+			font-size: .4rem;
+			font-weight: bold;
+		}
+		.h_qd>li:last-child{
+			width: 100%;
+			height: auto;
+			position: absolute;
+			bottom: .2rem;
+			font-size: .3rem;
+			color: #fff;
+			text-align: center;
+			letter-spacing: .02rem;
+		}
+		/*日历*/
+		.h_qd_rl{
+			width: 100%;
+			height: 4rem;
+			border-top: 1px solid #000;
+			border-bottom: 1px solid #000;
+		}
+		/*日历end*/
+		.h_qd_hdgz{
+			width: 100%;
+			margin-top: .2rem;
+			padding-left: .18rem;
+			padding-right: .18rem;
+			border-top: 1px solid #eeeeee;
+			padding-bottom: .4rem;
+			border-bottom: 1px solid #eeeeee;
+		}
+		.h_qd_hdgz>li{
+			width: 2.8rem;
+			height: .64rem;
+			margin: 0 auto;
+			background: url(img/qd_title.png) no-repeat;
+			background-size: contain;
+			margin-top: .7rem;
+			text-align: center;
+			line-height: .64rem;
+			font-size: .38rem;
+			color: #fff;
+			margin-bottom: .5rem;
+		}
+		.h_qd_hdgz>p{
+			font-size: .28rem;
+			color: #666;
+			letter-spacing: .02rem;
+			line-height: .45rem;
+		}
+	</style>
+	<body>
+		<ul class="h_qd">
+			<li></li>
+			<li></li>
+			<li>
+				<div>
+					已签到
+				</div>
+				<div>
+					<i>75</i>积分
+				</div>
+			</li>
+			<li>连续签到<i>5</i>天，获得<i>15</i>积分</li>
+		</ul>
+		<!--日历strat-->
+		<ul class="h_qd_rl">
+			<li></li>
+		</ul>
+		<!--日历 end-->
+		<ul class="h_qd_hdgz">
+			<li>活动规则</li>
+			<p>1.每天签到可获得5积分，累计一定的数量积分可抵现金使用，在兑换专区兑换商品；</p>
+			<p>2.签到采用连续签到模式，中断一天重新来过，连续签到数量越多，奖励越丰厚；</p>
+			<p>3.最终解释权归优粮网购平台所有。</p>
+		</ul>
+	</body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/mobile.css"/>
+	</head>
+	<style type="text/css">
+		.h_jf_title{
+			width: 100%;
+			height: 2.72rem;
+			background-color: #CCCCCC;
+			background: url(img/jf2.jpg) no-repeat;
+			background-size: cover;
+			overflow: hidden;
+		}
+		.h_jf_title>li{
+			text-align: center;
+			margin: 0 auto;
+		}
+		.h_jf_title>li:first-child{
+			text-align: center;
+			float: right;
+			font-size: .2rem;
+			width: 1rem;
+			height: .3rem;
+			line-height: .3rem;
+			border-radius: .05rem;
+			margin-top: .2rem;
+			margin-right: .2rem;
+			color: #fff;
+			border: .01rem solid #fff;
+		}
+		.h_jf_title>li:nth-child(2){
+			margin-top: .5rem;
+			
+		}
+		.h_jf_title>li:nth-child(2)>span{
+			font-size: 1rem;
+			color: #fff;
+			font-weight: bold;
+			 letter-spacing: .05rem;
+		}
+		.h_jf_title>li:nth-child(2)>i{
+			color: #f4caa2;
+			font-size: .4rem;
+		   
+		}
+		.h_jf_title>li:last-child{
+			width: 2.1rem;
+			height: .36rem;
+			line-height: .36rem;
+			text-align: center;
+			color: #fff;
+			border-radius: 1.05rem;
+			font-size: .24rem;
+			background-color: rgba(0,0,0,.2);
+			margin-top: .1rem;
+		}
+		.h_jf_content{
+			width: 100%;
+			text-align: center;
+		}
+		.h_jf_content>span{
+			height: 1rem;
+			line-height: 1rem;
+			font-size: .3rem;
+			color: #090909;
+		}
+		.h_jf_content>li{
+			width: 100%;
+			height: 1.56rem;
+			border-top: .01rem solid #d8d8d8;
+			padding: .4rem .18rem;
+		}
+		.h_jf_content>li:last-child{
+			border-bottom: .01rem solid #D8D8D8;
+		}
+		.h_jf_content>li>div:first-child{
+			width: 70%;
+			font-size: .24rem;
+		}
+		.h_jf_content>li>div:first-child>p{
+			text-align: left;
+			line-height: 180%;
+		}
+		.h_jf_content>li>div:first-child>p:last-child{
+			font-size: .22rem;
+			color: #737373;
+		}
+		.h_jf_content>li>div:last-child{
+			width: 30%;
+			text-align: right;
+			line-height: 200%;
+		}
+		.h_add{
+			color: #1a9c36;
+		}
+		.h_j{
+			color: #da251d;
+		}
+		/*header*/
+		header{
+			overflow: hidden;
+			height: 1.285rem;
+		}
+		.h_header{
+			width: 100%;
+			height: 1.28rem;
+			background-color: #FF423E;
+			padding-top: .4rem;
+			position: fixed;
+			
+			
+		}
+		.h_header>li{
+			width: 33.3333%;
+			height: 100%;
+			line-height: .88rem;
+			font-size: .4rem;
+			color: #fff;
+		}
+		.h_header>li:first-child{
+			text-align: left;
+			padding-left: .28rem;
+		}
+		.h_header>li:nth-child(2){
+			text-align: center;
+		}
+		.h_header>li:last-child{
+			text-align: right;
+			padding-right: .18rem;
+		}
+		.h_header>li:nth-child(2)>span{
+			font-size: .34rem;
+		}
+		/*弹框*/
+		 .h_jf_k{
+		 	width: 2.4rem;
+		 	height: 3rem;
+		 	border-radius: .1rem;
+		 	background: #fff;
+		 	position: fixed;
+		 	z-index: 10;
+		 	right: .25rem;
+		 	top: 1.25rem;
+		 	display: none;
+		 }
+		 .h_jf_k>div{
+		 	width: 0;
+		    height: 0;
+		    position: absolute;
+		    border-left: .2rem solid transparent;
+		    border-right: .2rem solid transparent;
+		    border-bottom: .2rem solid #fff;
+		    right: .05rem;
+		    top: -0.15rem;
+		 }
+		 .h_jf_k>ul{
+		 	width: 100%;
+		 	height: 3rem;
+		 	flex-wrap: wrap;
+		 }
+		 .h_jf_k>ul>li{
+		 	width: 100%;
+		 	height: 25%;
+		 	display: flex;
+		 	align-items: center;
+		 	border-top:.01rem solid #ccc;
+		 }
+		 .h_jf_k>ul>li:first-child{
+		 	border-top: none;
+		 }
+		 .h_jf_k>ul>li>i{
+		 	font-size: .37rem;
+		 	padding-left: .25rem;
+		 	padding-right: .25rem;
+		 }
+		 .h_jf_k>ul>li>span{
+		 	font-size: .26rem;
+		 	color: #090909;
+		 }
+		
+	</style>
+	<body>
+		<div class="h_jf_k">
+			<div></div>
+			<ul class="h_flex">
+				<li>
+					<i class="h_icon" style="color: #3eb135;">&#xe631;</i>
+					<span>微信</span>
+				</li>
+				<li>
+					<i class="h_icon" style="color: #3eb135;">&#xe60b;</i>
+					<span>朋友圈</span>
+				</li>
+				<li>
+					<i class="h_icon" style="color: #0CA7F8;">&#xe601;</i>
+					<span>QQ好友</span>
+				</li>
+				<li>
+					<i class="h_icon" style="color: #EBB843;">&#xe622;</i>
+					<span>QQ空间</span>
+				</li>
+			</ul>
+		</div>
+		<header>
+			<ul class="h_header h_flex">
+				<li class="h_icon">&#xe698;</li>
+				<li><span>我的积分</span></li>
+				<li class="h_icon"><i class="h_click">&#xe635;</i></li>
+			</ul>
+		</header>
+		<ul class="h_jf_title">
+			<li><a href="">帮助中心</a></li>
+			<li>
+				<i class="h_icon">&#xe6a3;</i>
+				<span>200</span>
+			</li>
+			<li>
+				邀请码 <i>101010</i>
+			</li>
+		</ul>
+		<ul class="h_jf_content">
+			<span>积分明细</span>
+			<li class="h_flex h_jcsa">
+				<div>
+					<p>购物送积分（商品号：11848867489）</p>
+					<p>2017-10-05 15:58:08</p>
+				</div>
+				<div class="h_add">
+					+17
+				</div>
+			</li>
+			<li class="h_flex h_jcsa">
+				<div>
+					<p>购物送积分（商品号：11848867489）</p>
+					<p>2017-10-05 15:58:08</p>
+				</div>
+				<div class="h_j">
+					-17
+				</div>
+			</li>
+			<li class="h_flex h_jcsa">
+				<div>
+					<p>购物送积分（商品号：11848867489）</p>
+					<p>2017-10-05 15:58:08</p>
+				</div>
+				<div class="h_j">
+					-17
+				</div>
+			</li>
+			<li class="h_flex h_jcsa">
+				<div>
+					<p>购物送积分（商品号：11848867489）</p>
+					<p>2017-10-05 15:58:08</p>
+				</div>
+				<div class="h_j">
+					-17
+				</div>
+			</li>
+			<li class="h_flex h_jcsa">
+				<div>
+					<p>购物送积分（商品号：11848867489）</p>
+					<p>2017-10-05 15:58:08</p>
+				</div>
+				<div class="h_j">
+					-17
+				</div>
+			</li>
+			<li class="h_flex h_jcsa">
+				<div>
+					<p>购物送积分（商品号：11848867489）</p>
+					<p>2017-10-05 15:58:08</p>
+				</div>
+				<div class="h_j">
+					-17
+				</div>
+			</li>
+			<li class="h_flex h_jcsa">
+				<div>
+					<p>购物送积分（商品号：11848867489）</p>
+					<p>2017-10-05 15:58:08</p>
+				</div>
+				<div class="h_j">
+					-17
+				</div>
+			</li>
+			<li class="h_flex h_jcsa">
+				<div>
+					<p>购物送积分（商品号：11848867489）</p>
+					<p>2017-10-05 15:58:08</p>
+				</div>
+				<div class="h_j">
+					-17
+				</div>
+			</li>	 
+		</ul>
+	</body>
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$('.h_click').click(function(){
+			$('.h_jf_k').toggle();
+		})
+	</script>
+</html>

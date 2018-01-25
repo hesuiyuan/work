@@ -1,0 +1,404 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/mobile.css"/>
+		<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	</head>
+	<style type="text/css">
+		body{
+			background-color: #CCCCCC;
+		}
+		.h_sc_box{
+			width: 95%;
+			height: auto;
+			overflow: hidden;
+			margin: 0 auto;
+			flex-wrap: wrap;
+			padding-top: .28rem;
+			/*margin-bottom: 1rem;*/
+		}
+		.h_sc_box>li{
+			width: 48%;
+			height: 4.06rem;
+			background: #fff;
+			margin-bottom: 4%;
+			text-align: center;	
+			padding-left: .28rem;
+			padding-right: .28rem;
+			padding-bottom: .28rem;
+			border-radius: .1rem;
+			position: relative;
+		}
+		.h_sc_box>li>a{
+			width: 100%;
+			height: 100%;
+			display: block;
+		}
+		.h_o{
+			position: absolute;
+			width: 0.46rem;
+			height: 0.46rem;
+			border: .02rem solid #bcbcbc;
+			background-color: #fff;
+			border-radius: 0.46rem;
+			right: .1rem;top: .1rem;
+			display: none;
+		}
+		.h_o_red{
+			background-color:#ff423e;
+			border-color: #ff423e;
+		}
+		.h_o_red:after{
+			content:"√";
+			color: #fff; 
+			font-size: .3rem;	 
+		}
+		.h_sc_box>li>a>img{
+			width: 2.87rem;
+			height: 2.87rem;
+			margin-top: 0.2rem;
+		}
+		.h_sc_box>li>a>p{
+			text-align: left;
+			font-size: .18rem;
+			padding-bottom: .05rem;
+			padding-top: .02rem;
+			color: #333;
+		}
+		.h_sc_box>li>a>p>i{
+			font-size: .24rem;
+			font-weight: bold;
+			color: #ff423e;
+		}
+		.h_sc_box>li>a>p>span{
+			font-size: .14rem;
+			text-decoration: line-through;
+			color: #aaa;
+			padding-left: .15rem;
+		}
+		.h_qxsc{
+			width: 100%;
+			height: 1rem;
+			border-top: .01rem solid #e1e1e1;
+			position: fixed;
+			background-color: #fff;
+			bottom: 0;
+			text-align: center;
+			line-height: 1rem;
+			display: none;
+		}
+		.h_qxsc>span{
+			background-color: #ff423e;
+			letter-spacing: .05rem;
+			color: #fff;
+			font-size: .3rem;
+			padding: .08rem .7rem;
+			border-radius: .1rem;	
+		}
+		/*弹框*/
+		.h_sc_content{
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0,0,0,.5);
+			position: fixed;
+			z-index: 10;
+			display: none;
+		}
+		.h_sc_tk{
+			width: 6rem;
+			height: 3rem;
+			border-radius: .2rem;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-left: -3rem;
+			margin-top: -1.5rem;
+			z-index: 11;
+		}
+		.h_sc_tk>li{
+			text-align: center;
+		}
+		.h_sc_tk>li:first-child{
+			height: 2.2rem;
+			line-height: 2.2rem;
+			font-size: .32rem;
+			letter-spacing: .02rem;
+			background-color: #fff;
+			border-radius: 0.2rem 0.2rem 0 0;
+			border-bottom: .01rem solid #ccc;
+		}
+		.h_sc_tk>li:last-child{
+			line-height: .8rem;
+			font-size: .26rem;
+			
+		}
+		.h_sc_tk>li:last-child>p{
+			width: 50%;
+			background-color: #fff;
+			border-radius: 0 0 0 0.2rem;
+		}
+		.h_sc_tk>li:last-child>p:last-child{
+			background-color: #ff423e;
+			border-radius: 0 0 0.2rem;
+			color: #fff;
+		}
+		/*弹框tow*/
+		.h_qx_tow{
+			width: 3rem;
+			height: 2.12rem;
+			background-color: rgba(0,0,0,0.8);
+			border-radius: .1rem;
+			position: absolute;
+			top: 50%;left: 50%;
+			margin-top: -1.06rem;
+			margin-left: -1.5rem;
+			z-index: 10;
+			display: none;
+		}
+		.h_qx_tow>li{
+			text-align: center;
+		}
+		 
+		.h_qx_tow>li>p:first-child{
+			font-size: .7rem;
+			color: #fff;
+			margin-top: .4rem;
+			margin-bottom: .2rem;
+		}
+		.h_qx_tow>li>p:last-child{
+			font-size: .28rem;
+			color: #fff;
+			letter-spacing: .03rem;
+		}
+	</style>
+	<body>
+		<!--弹框 star-->
+		<div class="h_sc_content">
+			<ul class="h_sc_tk">
+			<li>
+				 确认要取消收藏这1种商品吗？
+			</li>
+			<li class="h_flex">
+			 	<p class="h_sc_no">取消</p>
+			 	<p class="h_sc_yes">确定</p>
+			</li>
+		</ul>
+		</div>
+		<!--弹框 end-->
+		<!--弹框tow strat-->
+		 <ul class="h_qx_tow">
+		 	<li>
+		 		<p class="h_icon">&#xe60f;</p>
+		 		<p>取消成功</p>
+		 	</li>
+		 </ul>
+		<!--弹框tow end-->
+		<span class="scss">点击</span>
+		<ul class="h_sc_box h_flex h_jcsb">
+			<li>
+				<a href="#">
+				<img src="images/cs3.jpg"/>
+				<p>陕西西瑞优质大米</p>
+				<p>
+					 <i>¥</i>
+					 <i>200.00</i>
+					 <span>¥120.00</span>
+				</p>
+				
+				</a>
+				<div class="h_o"></div>
+			</li><li>
+				<a href="#">
+				<img src="images/cs3.jpg"/>
+				<p>陕西西瑞优质大米</p>
+				<p>
+					 <i>¥</i>
+					 <i>200.00</i>
+					 <span>¥120.00</span>
+				</p>
+				
+				</a>
+				<div class="h_o"></div>
+			</li>
+			<li>
+				<a href="#">
+				<img src="images/cs3.jpg"/>
+				<p>陕西西瑞优质大米</p>
+				<p>
+					 <i>¥</i>
+					 <i>200.00</i>
+					 <span>¥120.00</span>
+				</p>
+				
+				</a>
+				<div class="h_o"></div>
+			</li>
+			<li>
+				<a href="#">
+				<img src="images/cs3.jpg"/>
+				<p>陕西西瑞优质大米</p>
+				<p>
+					 <i>¥</i>
+					 <i>200.00</i>
+					 <span>¥120.00</span>
+				</p>
+				
+				</a>
+				<div class="h_o"></div>
+			</li>
+			<li>
+				<a href="#">
+				<img src="images/cs3.jpg"/>
+				<p>陕西西瑞优质大米</p>
+				<p>
+					 <i>¥</i>
+					 <i>200.00</i>
+					 <span>¥120.00</span>
+				</p>
+				
+				</a>
+				<div class="h_o"></div>
+			</li>
+			<li>
+				<a href="#">
+				<img src="images/cs3.jpg"/>
+				<p>陕西西瑞优质大米</p>
+				<p>
+					 <i>¥</i>
+					 <i>200.00</i>
+					 <span>¥120.00</span>
+				</p>
+				
+				</a>
+				<div class="h_o"></div>
+			</li>
+			<li>
+				<a href="#">
+				<img src="images/cs3.jpg"/>
+				<p>陕西西瑞优质大米</p>
+				<p>
+					 <i>¥</i>
+					 <i>200.00</i>
+					 <span>¥120.00</span>
+				</p>
+				
+				</a>
+				<div class="h_o"></div>
+			</li>
+			<li>
+				<a href="#">
+				<img src="images/cs3.jpg"/>
+				<p>陕西西瑞优质大米</p>
+				<p>
+					 <i>¥</i>
+					 <i>200.00</i>
+					 <span>¥120.00</span>
+				</p>
+				
+				</a>
+				<div class="h_o"></div>
+			</li>
+			<li>
+				<a href="#">
+				<img src="images/cs3.jpg"/>
+				<p>陕西西瑞优质大米</p>
+				<p>
+					 <i>¥</i>
+					 <i>200.00</i>
+					 <span>¥120.00</span>
+				</p>
+				
+				</a>
+				<div class="h_o"></div>
+			</li>
+			<li>
+				<a href="#">
+				<img src="images/cs3.jpg"/>
+				<p>陕西西瑞优质大米</p>
+				<p>
+					 <i>¥</i>
+					 <i>200.00</i>
+					 <span>¥120.00</span>
+				</p>
+				
+				</a>
+				<div class="h_o"></div>
+			</li>
+			<li>
+				<a href="#">
+				<img src="images/cs3.jpg"/>
+				<p>陕西西瑞优质大米</p>
+				<p>
+					 <i>¥</i>
+					 <i>200.00</i>
+					 <span>¥120.00</span>
+				</p>
+				
+				</a>
+				<div class="h_o"></div>
+			</li>
+			<li>
+				<a href="#">
+				<img src="images/cs3.jpg"/>
+				<p>陕西西瑞优质大米</p>
+				<p>
+					 <i>¥</i>
+					 <i>200.00</i>
+					 <span>¥120.00</span>
+				</p>
+				
+				</a>
+				<div class="h_o"></div>
+			</li>
+			<li>
+				<a href="#">
+				<img src="images/cs3.jpg"/>
+				<p>陕西西瑞优质大米</p>
+				<p>
+					 <i>¥</i>
+					 <i>200.00</i>
+					 <span>¥120.00</span>
+				</p>
+				
+				</a>
+				<div class="h_o"></div>
+			</li>
+			 
+			 
+		</ul>
+		<div class="h_qxsc">
+			<span>取消收藏</span>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$('.scss').click(function(){
+			$('.h_o').show()
+			$(this).text('完成')
+			$('.h_sc_box').css('marginBottom','1rem');
+			$('.h_qxsc').show();
+			
+		})
+		$('.h_o').click(function(){
+			$(this).toggleClass('h_o_red')
+		})
+		$('.h_qxsc').click(function(){
+			$(this).hide();
+			$('.h_sc_box').css('marginBottom','0rem');
+			$('.scss').text('点击');
+			$('.h_sc_content').show();
+		})
+		$('.h_sc_no').click(function(){
+			$(this).parent().parent().parent().hide();
+			$('.h_o').hide().removeClass('h_o_red');
+		})
+		$('.h_sc_yes').click(function(){
+			$('.h_o_red').parent().remove();
+			$(this).parent().parent().parent().hide();
+			$('.h_o').hide();
+			$('.h_qx_tow').show();
+		});
+	</script>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/mobile.css"/>
+	</head>
+	<style type="text/css">
+		.h_qcz_box{
+			width: 100%;
+			height: 3.4rem;
+			border-top: .01rem solid #e8e8e8;
+			margin-top: .3rem;
+			border-bottom: .01rem solid #e8e8e8;
+			padding-left: .18rem;
+			margin-bottom: .2rem;
+		}
+		.h_qcz_box>li:first-child{
+			padding-top: .36rem;
+			padding-right: .18rem;
+		}
+		.h_qcz_box>li:first-child>p{
+			font-size: .32rem;
+		}
+		.h_qcz_box>li:first-child>p:first-child{
+			padding-bottom: .35rem;
+		}
+		.h_qcz_box>li:first-child>p:last-child{
+			padding-bottom: .4rem;
+			border-bottom: .01rem solid #e8e8e8;
+			display: flex;
+			align-items: center;
+		}
+		.h_qcz_box>li:first-child>p:last-child>span{
+			font-size: .6rem;
+		}
+		.h_qcz_box>li:first-child>p:last-child>input{
+			height: .54rem;
+			margin-left: .28rem;
+			display: inline-block;
+			outline: none;
+			border:1px solid #fff;
+		}
+		.h_qcz_box>li:last-child{
+			color: #a0a0a1;
+			line-height: 1.05rem;
+			font-size: .26rem;
+		}
+		.h_qcz_cotent{
+			width: 100%;
+			height: 1.4rem;
+			border-top: .01rem solid #e8e8e8;
+			margin-top: .3rem;
+			border-bottom: .01rem solid #e8e8e8;
+			padding-left: .18rem;
+			padding-right: .18rem;
+			margin-bottom: .2rem;
+		}
+		.h_qcz_cotent>li{
+			width: 50%;
+			height: 100%;
+		}
+		.h_wz_bg,.h_wx_bg{
+			width: 2rem;
+			height: .6rem;
+			background: url(img/zfb.jpg) no-repeat;
+			background-size: contain;
+		}
+		.h_wx_bg{
+			background: url(img/wxzf.jpg) no-repeat;
+			background-size: contain;
+		}
+		.h_button{
+			width: 6.6rem;
+			height: .96rem;
+			background-color: #ff423e;
+			font-size: .36rem;
+			color: #fff;
+			text-align: center;
+			line-height: .96rem;
+			margin: 0 auto;
+			border-radius: .1rem;
+			margin-top: .6rem;
+			letter-spacing: .04rem;
+		}
+	</style>
+	<body>
+		<ul class="h_qcz_box">
+			<li>
+				<p>充值金额（元）</p>
+				<p><span>¥</span><input type="text" placeholder="请输入充值金额" /></p>
+			</li>
+			<li>可充值大于等于10，小于等于50000的整数金额</li>
+		</ul>
+		<ul class="h_qcz_cotent h_flex h_jcsa">
+			<li class="h_ai h_flex">
+				<div class="xuan-group">
+		            <input type="radio" id="radioOne" name="picRadio"/>
+		            <label for="radioOne">
+		            	<div class="h_wz_bg"></div>
+		            </label>
+		       </div>
+			</li>
+			<li class="h_ai h_flex">
+				<div class="xuan-group">
+		            <input type="radio" id="radioTwo" name="picRadio"/>
+		            <label for="radioTwo">
+		            	<div class="h_wx_bg"></div>
+		            </label>
+		        </div>
+			</li>
+		</ul>
+		<p class="h_button">立即充值</p>
+	</body>
+</html>

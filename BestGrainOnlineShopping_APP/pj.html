@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/mobile.css"/>
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+		.h_pj{
+			width: 100%;
+			height: 1.52rem;
+			margin-top: .2rem;
+			border-bottom: 1px solid #ccc;
+			padding: .4rem .18rem .3rem .4rem;
+			background: #fff;
+		}
+		.h_pj>img{
+			width: .8rem;
+			height: .8rem;
+		}
+		.h_pj>span{
+			width: 2.15rem;
+			font-size: .32rem;
+			padding-left: .2rem;
+			overflow: hidden;
+			text-overflow:ellipsis;
+			white-space: nowrap;
+			padding-right: .1rem;
+		}
+		.h_pjx>li:first-child{
+			width: 2.9rem;
+		}
+		.h_pjx>li:last-child{
+			font-size: .32rem;
+			color: #aaa;
+		}
+		.h_pj_textarea{
+			width: 100%;
+			height: 1.83rem;
+			padding-left: .18rem;
+			padding-right: .18rem;
+			background: #fff;
+		}
+		.h_pj_textarea>textarea{
+			width: 100%;
+			height: 100%;
+			outline: none;
+			border: none;
+			background: #fff;
+			resize: none;
+			font-size: .32rem;
+			color: #aaa;
+			padding-top: .24rem;
+		}
+		.h_pj_img{
+			width: 100%;
+			height: 2rem;
+			padding: 0 .18rem;
+			position: relative;
+			background: #fff;
+			 
+		}
+		.h_pj_img>input{
+			width: 1.6rem;
+			height: 1.6rem;
+			opacity: 0;
+		}
+		.h_pj_file_bg{
+			width: 1.6rem;
+			height: 1.6rem;
+			border: 1px dashed #ccc;
+			border-radius: .1rem;
+			position: absolute;
+			top: 0;
+			text-align: center;
+			padding: .28rem 0rem;
+		}
+		.h_pj_file_bg>p{
+			font-size: .32rem;
+		}
+		.h_pj_file_bg>i{
+			font-size: .5rem;
+			color: #909090;
+		}
+		.h_pj_img>li{
+			width:1.6rem;
+			height: 1.6rem;
+			margin-right: .2rem;
+		}
+		.h_pj_img>li>img{
+			width: 100%;
+			height: 100%;
+		}
+		.list>span{
+			font-size: .4rem;
+		}
+	</style>
+	<body>
+		<div class="h_pj h_flex h_ai">
+			 <img src="images/cs3.jpg"/>
+			 <span>描述描述描述描述描述描述描述描述描述描述描述</span>
+			 <ul class="h_pjx h_flex">
+			 	<li>
+			 	<div class="list">
+					<span class="star1">★</span>
+					<span class="star2">★</span>
+					<span class="star3">★</span>
+					<span class="star4">★</span>
+					<span class="star5">★</span>
+				</div>
+			 	</li>
+			 	<li class="h_pjjg"></li>
+			 </ul>
+		</div>
+		<div class="h_pj_textarea">
+			<textarea name="" rows="" cols="" placeholder="宝贝喜欢吗？分享你的心得......"></textarea>
+		</div>
+		<div class="h_pj_img">
+			<div class="h_pj_file_bg">
+				<i class="h_icon">&#xe7f2;</i>
+				<p>添加图片</p>
+			</div>
+			<input type="file" name="" id="" value="" />
+		</div>
+		<!--上传图片成功后显示图片-->
+		<!--<ul class="h_pj_img h_flex h_ai">
+			<li>
+				<img src="images/cs3.jpg"/>
+			</li>
+			<li>
+				<img src="images/cs02.jpg"/>
+			</li>
+			<li>
+				<img src="images/cs3.jpg"/>
+			</li>
+			<li>
+				<img src="images/cs02.jpg"/>
+			</li> 
+		</ul>-->
+	</body>
+	<script type="text/javascript">
+		//评价星星的js
+		for (var i=1; i<=5; i++) {
+		$(".star"+ i).click(function(){
+			var index = $(this).attr("class").substr(4,1);
+			for(var i=1; i<=index; i++){
+				$(".star"+ i).css("color","#ff4040");
+			}
+			for(var m=5; m>index; m--){
+				$(".star"+ m).css("color","#d3d3d3");
+			}
+			switch ($(this).index())
+				{
+				case 0:
+				  x="差评";
+				  break;
+				case 1:
+				  x="中评";
+				  break;
+				case 2:
+				  x="较满意";
+				  break;
+				case 3:
+				  x="满意";
+				  break;
+				case 4:
+				  x="好评";
+				  break;
+				}
+				$('.h_pjjg').text(x);	
+		})
+	}
+	</script>
+</html>

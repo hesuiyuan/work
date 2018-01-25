@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/mobile.css"/>
+	</head>
+	<style type="text/css">
+		.h_thh_box{
+			width: 100%;
+			height: 1.8rem;
+			margin: .2rem 0;
+			background: #fff;
+			padding: .3rem .19rem;
+		}
+		.h_thh_box>li:first-child{
+			width: 1.2rem;
+			height: 1.2rem;
+		}
+		.h_thh_box>li:first-child>img{
+			width: 100%;
+			height: 100%;
+		}
+		.h_thh_box>li:nth-child(2){
+			width: 5.9rem;
+			padding-left: .2rem;
+		}
+		.h_thh_box>li:nth-child(2)>p>span:first-child{
+			font-size: .24rem;
+		}
+		.h_thh_box>li:nth-child(2)>p>span:last-child{
+			 float: right;
+			 font-size: .24rem;
+		}
+		.h_thh_center{
+			width: 100%;
+			height: 6rem;
+			padding: .3rem .19rem;
+			background: #fff;
+			margin-bottom: .5rem;
+		}
+		.h_thh_center>li{
+			width: 100%;
+			height: 32%;
+			font-size: .3rem;
+			margin-bottom: .2rem;
+		}
+		.h_thh_center>li>p{
+			font-size: .3rem;
+			padding-bottom: .3rem;
+		}
+		.h_thh_center>li>select{
+			width: 100%;
+			height: .8rem;
+			outline: none;
+			border: 1px solid #eee;
+			background: #eeeeee;
+			border-radius: .1rem;
+			color: #5f5f5f;
+		}
+		.h_thh_center>li:last-child>p{
+			width: 2.6rem;
+			display: flex;
+			text-align: center;
+		}
+		.h_thh_center>li:last-child>p:last-child{
+			border: .01rem solid #ccc;
+			padding-bottom: 0;
+			border-radius: .1rem;
+		}
+		.h_thh_center>li:last-child>p>span{
+			width: 33.3333%;
+			line-height:200%;
+			color: #dcdcdc;
+			font-size: .36rem;
+		}
+		.h_thh_center>li:last-child>p>input{
+			width: 33.3333%;
+			text-align: center;
+			border:.01rem solid #ccc;
+			border-top: none;
+			outline: none;
+		}
+		.h_thh_bottom{
+			width: 100%;
+			height: 5.23rem;
+			padding: .4rem .18rem .3rem .18rem;
+			background: #fff;
+		}
+		.h_thh_bottom>li>p{
+			font-size: .3rem;
+		}
+		.h_thh_bottom>li>textarea{
+			height: 1.6rem;
+			outline: none;
+			resize: none;
+			width: 100%;
+			border: .01rem solid #eeeeee;
+			background: #eee;
+			border-radius: .1rem;
+			margin-top: .2rem;
+			font-size: .28rem;
+			padding-left: .2rem;
+			padding-top: .2rem;
+			color: #5f5f5f;
+		}
+		/*.h_thh_bottom>li>.h_bgss>input{
+			height: 1.6rem;
+			outline: none;
+			resize: none;
+			width: 100%;
+			border: .01rem solid #eeeeee;
+			background: #eee;
+			border-radius: .1rem;
+			font-size: .28rem;
+			color: #5f5f5f;
+			opacity: 0;
+			z-index: 10;
+		}*/
+		.h_thh_bottom>li>.h_bgss{
+			height: 1.6rem;
+			width: 100%;
+			background: #eee;
+			border-radius: .1rem;
+			margin-top: .2rem;
+			font-size: .28rem;
+			color: #5f5f5f;
+		}
+		.h_thh_bottom>li:nth-child(2){
+			position: relative;
+		}
+		.h_bgss{
+			position: absolute;
+			top:.35rem;
+		}
+		.h_bgss>span{
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin-top: -.2rem;
+			margin-left: -.6rem;
+		}
+		.h_thh_button{
+			width:7.15rem;
+			height: .88rem;
+			 margin: 0 auto;
+			line-height: .88rem;
+			background: #ff4040;
+			text-align: center;
+			border-radius: .88rem;
+			color: #fff;
+			margin-bottom: .16rem;
+		}
+		.h_thh_button>li{
+			letter-spacing: .05rem;
+			
+		}
+		.h_imgss>li{
+			width: 1.2rem;
+			height: 1.2rem;
+			margin-left: .18rem;
+			position: relative;
+		}
+		.h_imgss>li>img{
+			width: 100%;
+			height: 100%;
+		}
+		.h_imgss>li>input{
+			width: 100%;
+			height: 100%;
+			display: block;
+			opacity: 0;
+			z-index: 10;
+		}
+		.h_hidden_flie{
+			width: 100%;
+			height: 100%;
+			background: #ccc;
+			position: absolute;
+			top: 0;
+			text-align: center;
+			padding: .2rem .2rem;
+			font-size: .20rem;
+		}
+		.h_hidden_flie>i{
+			font-size: .28rem;
+			font-weight: bold;
+		}
+		
+	</style>
+	<body>
+		<ul class="h_thh_box h_flex">
+			<li>
+				<img src="images/cs3.jpg"/>
+			</li>
+			<li>
+				<p>
+					<span>陕西西瑞食用油</span>
+					<span>¥<i>59.00</i></span>
+				</p>
+				<p style="color: #a3a3a3;">
+					<span>订单编号：<i>98999X21332</i></span>
+					<span>×<i>1</i></span>
+				</p>
+				<p>
+					
+					<span>商品总额：¥<i>59.00</i></span>
+					<span></span>
+				</p>
+			</li>
+		</ul>
+		<ul class="h_thh_center">
+			<li>
+				<p>退换货选择<i style="color: #FF4040;">*</i> </p>
+				<select name="">
+					<option value="">退货</option>
+					<option value="">换货</option>
+				</select>
+			</li>
+			<li>
+				<p>退货原因<i style="color: #FF4040;">*</i> </p>
+				<select name="">
+					<option value="">退货</option>
+					<option value="">换货</option>
+				</select>
+			</li>
+			<li>
+				<p>退货数量<i style="color: #FF4040;">*</i> </p>
+				<p>
+					<span>-</span>
+					<input type="text" name="" id="" value="1" />
+					<span>+</span>
+				</p>
+			</li>
+		</ul>
+		<ul class="h_thh_bottom">
+			<li>
+				<p>问题描述<i style="color: #FF4040;">*</i> </p>
+				<textarea name="" rows="" cols="" placeholder="请您在此描述详细问题"></textarea>
+			</li>
+			<li>
+				<p>上传图片 &nbsp;&nbsp;<i style="color: #a6a6a6;">最多3张</i> </p>
+				
+				<!--<div class="h_bgss">
+					<input type="file" name="" id="" value="" />
+					<span><i>+</i><i>添加图片</i></span>
+				</div>-->
+				<ul class="h_bgss h_imgss h_flex h_ai">
+					<li>
+						<div class="h_hidden_flie"> <i>+</i><br />添加图片</div>
+						<input type="file" name="" id="" value="" />
+						<!--<img src="images/cs3.jpg"/>-->
+					</li> 
+					<li>
+												<div class="h_hidden_flie"> <i>+</i><br />添加图片</div>
+						<input type="file" name="" id="" value="" />
+						<!--<img src="images/cs3.jpg"/>-->
+					</li> 
+					<li>
+												<div class="h_hidden_flie"> <i>+</i><br />添加图片</div>
+						<input type="file" name="" id="" value="" />
+						<!--<img src="images/cs3.jpg"/>-->
+					</li> 
+				</ul>
+				
+			</li>
+		</ul>
+		<ul class="h_thh_button">
+			<li>提交</li>
+		</ul>
+	</body>
+</html>

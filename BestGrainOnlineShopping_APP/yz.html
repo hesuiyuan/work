@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/mobile.css"/>
+		<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	</head>
+	<style type="text/css">
+		.h_boxs{
+			width: 100%;
+			padding: 0 .18rem;
+		}
+		.h_boxs>li:first-child{
+			width: 100%;
+			height: 1.62rem;
+			color: #333;
+			padding: 0 .25rem;
+		}
+		.h_boxs>li:first-child>div:not(.line){
+			width: 49%;
+			flex-wrap: wrap;
+			padding-top: .78rem;
+			font-size: .3rem;
+			text-align: center;
+			position: relative;
+			
+		}
+		.h_border{
+			border-bottom: 2px solid #FF423E;
+		}
+		.line{
+			color: #ccc;
+			line-height:1.9rem;
+		}
+		.h_box>li:first-child{
+			padding: 0 .25rem;
+			margin-top: .1rem;
+		}
+		.h_box>li:first-child>input{
+			width: 100%;
+			height: 1rem;
+			border: .01rem solid #fff;
+			border-bottom-color: #ccc;
+			font-size: .3rem;
+			color: #aaa;
+			outline: none;
+		}
+		.h_box>li:first-child>p{
+			text-align: right;
+			font-size: .24rem;
+			padding-top: .3rem;
+		}
+		.h_box>li:first-child>p>a{
+			color: #333;
+		}
+		.h_box>li:last-child{
+			width: 6.6rem;
+			height: .9rem;
+			background-color: #FF423E;
+			text-align: center;
+			line-height: .9rem;
+			font-size: .36rem;
+			margin: 0 auto;
+			border-radius:.9rem;
+			margin-top: .5rem;
+		}
+		.h_box>li:last-child>a{
+			width: 100%;
+			height: 100%;
+			display: block;
+			color: #fff;
+			
+		}
+		.h_one p{
+			text-align: left!important;
+			color: #ff4040;
+		}
+		.h_one>li>input:nth-child(2){
+			width: 72%;
+		}
+		.h_one>li>span{
+			color: #fff;
+			background: #FF4040;
+			font-size: .26rem;
+			padding: .2rem .2rem;
+			border-radius: .1rem;
+			letter-spacing: .01rem;
+		}
+		.h_boxs p{
+			 width: 0;
+		    height: 0;
+		    border-left: 5px solid transparent;
+		    border-right: 5px solid transparent;
+		    position: absolute;
+		    bottom: -6px;
+		    left: 50%;
+		    margin-left: -4px;
+		}
+		.h_sjx{
+			 border-top: 5px solid #FF423E;
+		}
+	</style>
+	<body>
+		<!--title start-->
+		<ul class="h_boxs">
+			<li class="h_flex">
+				<div class="h_border">
+					<span>绑定手机号码</span>
+					<p class="h_sjx"></p>
+				</div>
+				<span class="line">|</span>
+				<div>
+					<span>绑定已有账号</span>
+					<p></p>
+				</div>
+			</li>
+		</ul>
+		<!--title end-->
+		<!--content-one start-->
+		<ul class="h_box h_one">
+			<li>
+				<input type="text" name="" id="" value="" placeholder="请输入手机号"/>
+				<input type="text" name="" id="" value="" placeholder="验证码" />
+				<span>获取验证码</span>
+				<input type="text" name="" id="" value="" placeholder="密码" />
+				<input type="text" name="" id="" value="" placeholder="确认密码" />
+				<p><i class="h_icon">&#xe614;</i> 我已同意网页的注册协议</p>
+			</li>
+		 	<li>
+		 		<a href="#">绑定账号</a>
+		 	</li>
+		</ul>
+		<!--content-one end-->
+		<!--content-one start-->
+		<ul class="h_box" style="display: none;">
+			<li>
+				<input type="text" name="" id="" value="" placeholder="请输入手机号"/>
+				<input type="text" name="" id="" value="" placeholder="请输入密码" />
+				<p><a href="#">忘记密码?</a></p>
+			</li>
+		 	<li>
+		 		<a href="#">绑定账号</a>
+		 	</li>
+		</ul>
+		<!--content-one end-->
+	</body>
+	<script type="text/javascript">
+		$(".h_boxs>li>div").click(function(){
+			$(".h_boxs>li>div").removeClass('h_border');
+			$(this).addClass('h_border');
+			
+			if($(this).index()==0){
+				$('.h_box').hide();
+				$('.h_box').eq(0).show();
+				$(".h_boxs>li>div>p").removeClass('h_sjx');
+				$(".h_boxs>li>div>p").eq(0).addClass('h_sjx');
+				
+			}else{
+				$('.h_box').hide();
+				$('.h_box').eq(1).show();
+				$(".h_boxs>li>div>p").removeClass('h_sjx');
+				$(".h_boxs>li>div>p").eq(1).addClass('h_sjx');
+			}
+			
+			 
+		})
+	</script>
+</html>

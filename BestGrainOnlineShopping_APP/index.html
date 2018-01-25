@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/mobile.css"/>
+		 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	</head>
+	<style type="text/css">
+		
+		body{
+			background-color: #efeff4;
+		}
+		 .h_content{
+		 	width: 100%;
+		 	padding-left: 0.17rem;
+		 	padding-right: 0.17rem;
+		 	height: 1.9rem;
+		 	margin-bottom: .2rem;
+		 	background: #efeff4;
+		 }
+		 .h_bg{
+		 	width: 100%;
+		 	height: 100%;
+		 	background: url(img/bg_yhj.jpg) no-repeat;
+		 	background-size: cover;
+		 }
+		 .h_bg>li:first-child{
+		 	width: 73%;
+		 	height: 100%;
+		 	padding: .28rem .47rem .22rem .32rem;
+		 }
+		 .h_bg>li:first-child>div:first-child{
+		 	width: 1.4rem;
+		 	height: 1.4rem;
+		 	padding: .1rem;
+		 	border: .01rem solid #ededed;
+		 }
+		 .h_bg>li:first-child>div:first-child>img{
+		 	width: 100%;
+		 	height: 100%;
+		 }
+		 .h_bg>li:first-child>div:last-child{
+		 	padding-left: .3rem;
+		 	flex-wrap: wrap;
+		 }
+		 .h_bg>li:first-child>div:last-child>span{
+		 	width: 100%;
+		 	height: 50%;
+		 }
+		 .h_bg>li:first-child>div:last-child>span:first-child{
+		 	font-size: .2rem;
+		 	letter-spacing: .02rem;
+		 	line-height: .3rem;
+		 }
+		 .h_bg>li:first-child>div:last-child>span:last-child{
+		 	padding: .1rem;
+		 }
+		 .h_bg>li:first-child>div:last-child>span:last-child>em{
+		 	color: #ff423e;
+		 	font-size: .36rem;
+		 	font-weight: bold;
+		 }
+		 .h_bg>li:first-child>div:last-child>span:last-child>span{
+		 	font-size: .2rem;
+		 	background-color: #ffeede;
+		 	letter-spacing: .01rem;
+		 	padding: .1rem;
+		 	margin-left: .1rem;
+		 	color: #ff423e;
+		 }
+		 .h_bg>li:last-child{
+		 	width: 27%;
+		 	height: 100%;
+		 }
+		 .h_bg>li:last-child>ul{
+		 	width: 100%;
+		 	height: 100%;
+		 	flex-wrap: wrap;
+		 }
+		 .h_bg>li:last-child>ul:first-child>li:first-child{
+		 	width:100%;
+		 	height: 70%;
+		 }
+		 .h_bg>li:last-child>ul:first-child>li:last-child{
+		 	width: 100%;
+		 	height:30%;
+		 	
+		 }
+		 .h_bg>li:last-child>ul:first-child>li:last-child span{
+		  	 padding: .07rem .15rem .07rem .15rem;
+		 	border-radius: .6rem;
+		 	background-color: #ff423e;
+		 	font-size: .2rem;
+		 }
+		 /*弧形进度条*/
+		.circle {
+                width: 1rem;
+                height: 1rem;
+                position: relative;
+                border-radius: 50%;
+                background: #ff423e;
+            }      
+            .clip_left,.clip_right{
+                width:1rem;
+                height:1rem;
+                position: absolute;
+                top: 0px;left: 0px;
+            }
+            .circle_left, .circle_right{
+                width:1rem;
+                height:1rem;
+                position: absolute;
+                border-radius: 50%;
+                top: 0px;left: 0px;
+                background: #ffb0b0;
+            }
+            /*出于展示用的改变背景色*/
+            /*.circle_left{
+                background: green;
+            }
+            .circle_right{
+                background: lightblue;
+            }*/
+            .circle_right,.clip_right {
+                clip:rect(0,auto,auto,.5rem);
+            }
+            .circle_left , .clip_left{
+                clip:rect(0,.5rem,auto,0);
+            }
+                 
+            /*
+            *当top和left取值为auto时，相当于0
+            *当bottom和right取值为auto时，相当于100%
+            */
+            .mask {
+                width: .75rem;
+                height: .75rem;
+                border-radius: 50%;
+                left: .125rem;
+                top:.125rem;
+                background: #FFF;
+                position: absolute;
+                text-align: center;
+                color: #ff423e;
+                font-size: .2rem;
+            }
+            .mask>p{
+            	padding-top: .1rem;
+            }
+            .bg_c{
+            	background: #cccccc!important;
+            }
+            .text_c{
+            	color: #CCCCCC!important;
+            }
+            .bg_tran{
+            	background-color: transparent!important;
+            }
+	</style>
+	<body>
+		<!-- one start-->
+		 <section class="h_content">
+		 	 <ul class="h_bg h_flex">
+		 	 	<li class="h_flex">
+		 	 		<div>
+		 	 			<img src="images/cs.jpg"/>
+		 	 		</div>
+		 	 		<div class="h_f1 h_flex">
+		 	 			<span>
+		 	 				全品（除特殊商品）全品类（除特殊商品）
+		 	 			</span>
+		 	 			<span class="h_flex">
+		 	 				 <em>¥</em>
+		 	 				 <em>20</em>
+		 	 				 <span>满500可用</span>
+		 	 			</span>
+		 	 		</div>
+		 	 	</li>
+		 	 	<li>
+		 	 		<ul class="h_flex">
+		 	 			<li class="h_flex h_ai h_jc">
+		 	 				<div class="circle">
+					            <!--左半边圆-->
+					            <div class="circle_left">
+					                <div class="clip_left">
+					                     
+					                </div>
+					            </div>
+					            <!--右半边圆-->
+					            <div class="circle_right">
+					                <div class="clip_right"></div>
+					            </div>
+					            <div class="mask">
+					            	<p>已抢</p>
+					                <span>10</span>%
+					            </div>
+					        </div>
+		 	 			</li>
+		 	 			<li class="h_flex h_jc">
+		 	 				<a href="#">
+		 	 					<span>立即领取</span>
+		 	 				</a>
+		 	 			</li>
+		 	 		</ul>
+		 	 	</li>
+		 	 </ul>
+		 </section>
+		 <!--one end-->
+		 <!-- tow start-->
+		  <section class="h_content">
+		 	 <ul class="h_bg h_flex">
+		 	 	<li class="h_flex">
+		 	 		<div>
+		 	 			<img src="images/cs.jpg"/>
+		 	 		</div>
+		 	 		<div class="h_f1 h_flex">
+		 	 			<span>
+		 	 				全品（除特殊商品）全品类（除特殊商品）
+		 	 			</span>
+		 	 			<span class="h_flex">
+		 	 				 <em>¥</em>
+		 	 				 <em>20</em>
+		 	 				 <span>满500可用</span>
+		 	 			</span>
+		 	 		</div>
+		 	 	</li>
+		 	 	<li>
+		 	 		<ul class="h_flex">
+		 	 			<li class="h_flex h_ai h_jc">
+		 	 				<div class="circle">
+					            <!--左半边圆-->
+					            <div class="circle_left">
+					                <div class="clip_left">
+					                     
+					                </div>
+					            </div>
+					            <!--右半边圆-->
+					            <div class="circle_right">
+					                <div class="clip_right"></div>
+					            </div>
+					            <div class="mask">
+					            	<p>已抢</p>
+					                <span>80</span>%
+					            </div>
+					        </div>
+		 	 			</li>
+		 	 			<li class="h_flex h_jc">
+		 	 				<a href="#">
+		 	 					<span>立即领取</span>
+		 	 				</a>
+		 	 			</li>
+		 	 		</ul>
+		 	 	</li>
+		 	 </ul>
+		 </section>
+		 <!--one end-->
+		 
+	</body>
+	<script type="text/javascript">
+		$('.mask span').each(function(i,v){
+			if($('.mask span').eq(i).text()<=50){
+				console.log($('.mask span').eq(i).parent().siblings('.circle_right'))
+			 $('.mask span').eq(i).parent().siblings('.circle_right').css('transform','rotate('+($('.mask span').eq(i).text()*3.6)+'deg)');	
+			}else{
+			 
+			 $('.mask span').eq(i).parent().siblings('.circle_right').css({'transform':'rotate(0deg)'}).css('background','#ff423e');
+			$('.mask span').eq(i).parent().siblings('.circle_left').css('transform','rotate('+(($('.mask span').eq(i).text()-50)*3.6)+'deg)');
+			}
+		})
+             
+	</script>
+</html>

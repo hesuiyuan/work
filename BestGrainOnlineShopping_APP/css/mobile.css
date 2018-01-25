@@ -1,0 +1,179 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 513844 */
+  src: url('//at.alicdn.com/t/font_513844_pmoqxkiy4xwdn29.eot');
+  src: url('//at.alicdn.com/t/font_513844_pmoqxkiy4xwdn29.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_513844_pmoqxkiy4xwdn29.woff') format('woff'),
+  url('//at.alicdn.com/t/font_513844_pmoqxkiy4xwdn29.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_513844_pmoqxkiy4xwdn29.svg#iconfont') format('svg');
+}
+	body,ul,ol,dl,h1,h2,h3,h4,h5,h6,p,input,span,header,b,em,i{
+		margin: 0px;padding: 0px;list-style: none;font-weight: normal;font-style: normal;
+	}
+	img{
+		border: none;
+	}
+	a{
+		text-decoration: none;
+		color: #fff;
+	}
+	button,a{
+		 -webkit-tap-highlight-color:rgba(0,0,0,0);
+	}
+	body{
+		font-family: "苹方 中等方","微软雅黑","Helvetica Neue LT Rro";color: #333;background:#eee;font-size: 16px;
+	}
+	*{
+		box-sizing:border-box;
+	}
+	html{
+		font-size: 100px;
+	}
+	@media all and (min-width:320px){
+		html{
+			font-size: 42.6px;
+		}
+	}
+	@media all and (min-width:360px){
+		html{
+			font-size: 48px;
+		}
+	}
+	@media all and (min-width:375px) {
+		html {
+				font-size: 50px;
+			}
+	}
+	@media all and (min-width:414px) {
+		html {
+			font-size: 55.2px;
+		}
+	}
+	@media all and (min-width:750px) {
+		html {
+			font-size: 100px;
+		}
+	}
+	.h_icon{
+		 font-family: 'iconfont';
+	}
+	/*布局样式*/
+	.h_flex{
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+	}
+	/* 水平居中*/
+	.h_jc{
+		-webkit-box-align: center;
+		-moz-box-align: center;
+		-ms-flex-pack:center;/* IE 10 */
+		-webkit-justify-content: center;
+		-moz-justify-content: center;
+		justify-content: center;/* IE 11+,Firefox 22+,Chrome 29+,Opera 12.1*/
+	}
+	.h_jcsa{
+		-webkit-box-align:space-around ;
+		-moz-box-align: space-around;
+		-ms-flex-pack:space-around;/* IE 10 */
+		-webkit-justify-content: space-around;
+		-moz-justify-content: space-around;
+		justify-content: space-around;/* IE 11+,Firefox 22+,Chrome 29+,Opera 12.1*/
+	}
+	.h_jcsb{
+		-webkit-box-align:space-between ;
+		-moz-box-align: space-between;
+		-ms-flex-pack:space-between;/* IE 10 */
+		-webkit-justify-content: space-between;
+		-moz-justify-content: space-between;
+		justify-content: space-between;/* IE 11+,Firefox 22+,Chrome 29+,Opera 12.1*/
+	}
+	/* 垂直居中 */
+	.h_ai{
+		  -webkit-box-pack: center;
+		  -moz-box-pack: center;
+		  -ms-flex-align:center;/* IE 10 */
+		  -webkit-align-items: center;
+		  -moz-align-items: center;
+		  align-items: center;
+	}
+	.h_f1{
+		flex: 1;
+		-webkit-box-flex: 1;
+	}
+	.h_box{
+		width: 100%;
+		padding: 0 .18rem;
+	}
+					/*单选框使用背景图片写法*/
+			.xuan-group input{display:none;opacity:0;}
+			.xuan-group input[type=checkbox]+label, .xuan-group input[type=radio]+label {
+				line-height: 1;
+				position: relative;
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-align: center;
+				-webkit-align-items: center;
+				-ms-flex-align: center;
+				align-items: center;
+				margin:2px;
+			}
+			.xuan-group input[type=checkbox]+label:before, .xuan-group input[type=radio]+label:before {
+				line-height: 20px;
+				display: inline-block;
+				width: 18px;
+				height: 18px;
+				margin-right: 8px;
+				content: '';
+				color: #fff;
+				border: 1px solid #dce4e6;
+				background-color: #f3f6f8;
+				border-radius: 50%;
+			}
+			.xuan-group input[type=checkbox]:checked+label:before,.xuan-group input[type=radio]:checked+label:before{
+				content:' ';
+				background:#e02222 url(../image/h_dh.png) 2px 2px no-repeat;
+				background-size:80% 80%;
+			}
+			
+			/*header title*/
+			header{
+				width:100%;
+				overflow: hidden;
+				position: relative;
+				height: 1.28rem;
+			}
+			.h_header{
+				width: 100%;
+				height: 1.28rem;
+				background-color: #FF423E;
+				padding-top: .4rem;
+				position: fixed;
+				
+				
+			}
+			.h_header>li{
+				width: 33.3333%;
+				height: 100%;
+				line-height: .88rem;
+				font-size: .4rem;
+				color: #fff;
+			}
+			.h_header>li:first-child{
+				text-align: left;
+				padding-left: .28rem;
+			}
+			.h_header>li:nth-child(2){
+				text-align: center;
+			}
+			.h_header>li:last-child{
+				text-align: right;
+				padding-right: .18rem;
+			}
+			.h_header>li:nth-child(2)>span{
+				font-size: .34rem;
+			}
+			
+	 
