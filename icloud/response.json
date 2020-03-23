@@ -1,0 +1,73 @@
+{
+   "stoppage": [
+	{
+      "comment":"Stoppage Windows Patching",
+      "date": [{ "@from": "02/23/2020 00:00:00", "@to": "02/23/2020 03:00:00"}],
+      "message": {"@eng": "Due to system maintenance, the service is temporarily unavailable. Sorry for any inconvenience caused.", "@zhs": "因现正进行系统维护，暂时未能提供服务，不便之处，敬请原谅。", "@zht": "因現正進行系統維護，暫時未能提供服務，不便之處，敬請原諒。"}, "title": {"@eng": "System maintenance", "@zhs": "系统更新", "@zht": "系統更新"}
+    }
+  ], 
+
+  "comment_notice":"--------------------------------------For  Notice----------------------------------------------------------------------------",
+  
+  "notice": [
+	{
+      "create": "02/24/2020 06:00:00",
+      "date": [{ "@from": "02/24/2020 06:00:00", "@to": "02/28/2020 23:59:00"}],
+      "message": {
+        "@eng": "Services of AIA Connect will be temporarily suspended from 00:00 to 03:00 on Feb 23, 2020 (HKT) . Sorry for any inconvenience that may cause.",
+        "@zhs": "友联系之服务将于(香港时间) 2月23日 0时至3时暂停。不便之处，敬请原谅。",
+        "@zht": "友聯繫之服務將於(香港時間) 2月23日 0時至3時暫停。不便之處，敬請原諒。"
+      },
+      "title": {"@eng": "System maintenance", "@zhs": "系统更新", "@zht": "系統更新"}
+    }
+  ],
+
+  "comment_butnotice":"--------------------------------------For SOLO BU----------------------------------------------------------------------------",
+  
+  "buNotice": [
+    {
+      "affected": ["ccId"],
+      "create": "09/01/2016 16:30:00",
+      "date": [{"@from": "11/06/2016 18:00:00", "@to": "11/06/2016 19:00:00"} ],
+      "message": {
+        "@eng": "Due to urgent system maintenance, the CC service will be temporarily unavailable. Sorry for any inconvenience caused.",
+        "@zhs": "因現正進行緊急系統維護,CC暫時未能提供服務,不便之处，敬请原谅。",
+        "@zht": "因現正進行緊急系統維護，CC暫時未能提供服務,不便之處，敬請原諒。"
+      },
+      "title": {"@eng": "CC System maintenance", "@zhs": "CC系统更新", "@zht": "CC系統更新"}
+    },
+    {
+      "affected": ["ptId"],
+      "create": "09/01/2016 16:30:00",
+      "date": [{"@from": "11/06/2016 18:00:00", "@to": "11/06/2016 19:00:00"} ],
+      "message": {
+        "@eng": "Due to urgent system maintenance, the PT service will be temporarily unavailable. Sorry for any inconvenience caused.",
+        "@zhs": "因現正進行緊急系統維護,PT暫時未能提供服務,不便之处，敬请原谅。",
+        "@zht": "因現正進行緊急系統維護，PT暫時未能提供服務,不便之處，敬請原諒。"
+      },
+      "title": {"@eng": "System maintenance", "@zhs": "PT系统更新", "@zht": "PT系統更新"}
+    },
+    {
+      "affected": ["ebId"],
+      "create": "09/01/2016 16:30:00",
+      "date": [{"@from": "11/06/2016 18:00:00", "@to": "11/06/2016 19:00:00"} ],
+      "message": {
+        "@eng": "Due to urgent system maintenance, the EB service will be temporarily unavailable. Sorry for any inconvenience caused.",
+        "@zhs": "因現正進行緊急系統維護,VT暫時未能提供服務,不便之处，敬请原谅。",
+        "@zht": "因現正進行緊急系統維護，VT暫時未能提供服務,不便之處，敬請原諒。"
+      },
+      "title": {"@eng": "EB System maintenance", "@zhs": "EB系統更新", "@zht": "EB系統更新"}
+    },
+    {
+      "affected": ["vtId"],
+      "create": "09/01/2016 16:30:00",
+      "date": [{"@from": "11/06/2016 18:00:00", "@to": "11/06/2016 19:00:00"} ],
+      "message": {
+        "@eng": "Due to urgent system maintenance, the VT service will be temporarily unavailable. Sorry for any inconvenience caused.",
+        "@zhs": "因現正進行緊急系統維護,VT暫時未能提供服務,不便之处，敬请原谅。",
+        "@zht": "因現正進行緊急系統維護，VT暫時未能提供服務,不便之處，敬請原諒。"
+      },
+      "title": {"@eng": "VT System maintenance", "@zhs": "VT系統更新", "@zht": "VT系統更新"}
+    }
+  ]
+}
